@@ -1,42 +1,63 @@
+@font-face {
+  font-family: 'gooddogregular';
+  src: url('GoodDog-webfont.woff') format('woff'), url('GoodDog-webfont.ttf') format('truetype'), url('GoodDog-webfont.svg#gooddogregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  margin: 0;
+  padding: 0 10px;
+}
 html {
   min-height: 100%;
   position: relative;
 }
 body {
-  background-color: #f5e9e2;
-  color: #0b0014;
-  margin-bottom: 110px;
+  background-color: #FFEBE7;
+  background: radial-gradient(ellipse at center, #FFEBE7 50%, #FFC0BE 100%);
+  color: #011638;
+  margin-bottom: 2.5em;
 }
-#header-text {
-  color: #d44d5c;
-  text-shadow: 0 1px 1px rgba(11, 0, 20, 0.5);
+body a {
+  text-decoration: none;
 }
-.content-row {
-  padding-top: 1em;
-  padding-bottom: 1em;
+body a,
+body a:visited,
+body a:hover,
+body a:active {
+  color: #FFC0BE;
 }
-.content-row.pink {
-  background-color: #d44d5c;
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
 }
-.content-row.light {
-  background-color: #e3b5a4;
+.container {
+  align-self: center;
 }
-.content-row.dark {
-  background-color: #773344;
-  color: #f5e9e2;
+.text-item {
+  background: #011638;
+  color: #FFC0BE;
+  padding: .33em;
+  display: inline;
+  margin: .1em;
+  line-height: 1.8;
+  font-family: 'gooddogregular';
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #FF82A9;
+  font-size: 2rem;
 }
-.content-row.black {
-  background-color: #0b0014;
-  color: #f5e9e2;
+.text-item.large {
+  font-size: 3.3rem;
 }
-.content-row.white {
-  background-color: #f5e9e2;
-}
-footer {
-  margin: 0;
-  height: 110px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+@media (max-width: 600px) {
+  .text-item {
+    text-shadow: none;
+    font-size: 1.3rem;
+  }
+  .text-item.large {
+    font-size: 2rem;
+  }
 }

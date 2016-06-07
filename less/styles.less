@@ -1,56 +1,81 @@
 @import "mixins.less";
 @import "variables.less";
 
+@font-face {
+    font-family: 'gooddogregular';
+    src: url('GoodDog-webfont.woff') format('woff'),
+         url('GoodDog-webfont.ttf') format('truetype'),
+         url('GoodDog-webfont.svg#gooddogregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+	margin: 0;
+	padding: 0 10px;
+}
+
 html {
 	min-height: 100%;
 	position: relative;
 }
 
 body {
-	background-color: @c-white;
-	color: @c-black;
+	background-color: @base-bg;
+	background: radial-gradient(ellipse at center, @pale 50%,@peach 100%);
 
-	margin-bottom: 110px;
+	color: @base-text;
+
+	a {
+		&,
+		&:visited,
+		&:hover,
+		&:active {
+			color: @peach;
+		}
+
+		text-decoration: none;
+	}
+
+	margin-bottom: 2.5em;
 }
 
-#header-text {
-	color: @c-pink;
-	text-shadow: 0 1px 1px fade(@c-black, 50%);
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
 }
 
-.content-row {
-	.row-padding(1em);
+.container {
+	align-self: center;
+}
 
-	&.pink {
-		.bg(@c-pink);
-	}
+.text-item {
+	background: @dblue;
+	color: @peach;
+	padding: .33em;
+	display: inline;
 
-	&.light {
-		.bg(@c-light-brown);
-	}
+	margin: .1em;
+	line-height: 1.8;
+	font-family: 'gooddogregular';
+	text-shadow: 1px 1px 0 @black, 2px 2px 0 @pink;
 
-	&.dark {
-		.bg(@c-brown);
-		color: @c-white;
-	}
+	font-size: 2rem;
 
-	&.black {
-		.bg(@c-black);
-		color: @c-white;
-	}
-
-	&.white {
-		.bg(@c-white);
+	&.large {
+		font-size: 3.3rem;
 	}
 }
 
-footer {
-	margin: 0;
-	height: 110px;
-
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
+@media (max-width: 600px) {
+	.text-item {
+		text-shadow: none;
+		font-size: 1.3rem;
+		&.large {
+			font-size: 2rem;
+		}
+	}
 }
