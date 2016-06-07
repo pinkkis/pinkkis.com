@@ -52,7 +52,7 @@ body a:active {
 .text-item.large {
   font-size: 3.3rem;
 }
-@media (max-width: 600px) {
+@media (min-width: 376px) and (max-width: 600px) {
   .text-item {
     text-shadow: none;
     font-size: 1.3rem;
@@ -61,10 +61,20 @@ body a:active {
     font-size: 2rem;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 321px) and (max-width: 375px) {
   .text-item {
     text-shadow: none;
     font-size: 1.15rem;
+  }
+  .text-item.large {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .text-item {
+    line-height: 2;
+    text-shadow: none;
+    font-size: 0.9rem;
   }
   .text-item.large {
     font-size: 2rem;
