@@ -61,3 +61,12 @@ body a:active {
     font-size: 2rem;
   }
 }
+@media (max-width: 320px) {
+  .text-item {
+    text-shadow: none;
+    font-size: 1.15rem;
+  }
+  .text-item.large {
+    font-size: 2rem;
+  }
+}
