@@ -42,7 +42,7 @@ body a:active {
   color: #FFC0BE;
   padding: .33em;
   display: inline;
-  margin: .1em;
+  margin: 5px;
   line-height: 1.8;
   font-family: 'gooddogregular';
   text-shadow: 1px 1px 0 #000, 2px 2px 0 #FF82A9;
