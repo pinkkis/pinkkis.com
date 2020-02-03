@@ -1,1 +1,2 @@
-# pinkkis.github.io
+# pinkkis.com
+personal website repo
