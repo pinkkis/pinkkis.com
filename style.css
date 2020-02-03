@@ -1,0 +1,65 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fdfbfc;
+}
+
+#header-row {
+	background-color: #98D2E2;
+	background-image: url(images/birch.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+
+	max-height: 500px;
+}
+
+#main {
+	padding-bottom: 100px;
+}
+
+.name {
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 50px;
+}
+
+#main a:any-link {
+	color: #457582;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.icon-link {
+	color: #222;
+	font-size: 28px;
+	transition: all 0.2s;
+}
+
+.icon-link:hover {
+	color: #333;
+}
+
+footer {
+	background-color: #98D2E2;
+	color: white;
+	font-family: 'Permanent Marker', sans-serif;
+}
+
+@media only screen and (max-width: 990px) {
+	#header-row {
+		background-position: -110 0;
+	}
+
+	.name {
+		font-size: 42px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#header-row {
+		background-position: -200 0;
+	}
+
+	.name {
+		font-size: 30px;
+	}
+}
